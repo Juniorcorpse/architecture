@@ -1,0 +1,27 @@
+{
+  "name": "architecture",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Juniorcorpse/architecture#readme",
+  "bugs": {
+    "url": "https://github.com/Juniorcorpse/architecture/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juniorcorpse/architecture.git"
+  },
+  "license": "ISC",
+  "author": "jr_souza",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "uuid": "^14.0.3"
+  }
+}
