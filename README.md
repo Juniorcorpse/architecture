@@ -1,13 +1,15 @@
 ----
 
-Arquitetura de Software
+## Arquitetura de Software
 
 ----
 
+```sh
+npm install express mustache-express dotenv
+npm install --save-dev @types/express @types/mustache-express @types/node
+```
 
-- npm install express mustache-express dotenv
-- npm install --save-dev @types/express @types/mustache-express @types/node
-- Adicionado o Jest e seus tipos como dependências de desenvolvimento no package.json
+- Adicionado o `Jest` e seus tipos como dependências de desenvolvimento no `package.json`
 
 ## Configuração dos testes com Jest
 
