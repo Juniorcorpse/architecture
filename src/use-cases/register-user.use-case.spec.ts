@@ -1,5 +1,5 @@
 import { createUser } from "../entities/user.js";
-import type { UserRepository } from "../ports/user-repository.js";
+
 import { createInMemoryUserRepository } from "../tests/ports/in-memory-user-repository.js";
 import { registerUser } from "./register-user.use-case.js";
 describe("register User - User case", () => {

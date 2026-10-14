@@ -8,12 +8,12 @@ export type User = {
   createdAt: Date;
 }
 
-type CreateUserType = {
+export type CreateUserType = {
   name: string;
   email: string;
   password: string;
 };
-1
+
 const hashPassword = (password: string): string => {
     return hashSync(password); // Hash the password with a salt round of 10
 }
