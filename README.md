@@ -6,6 +6,8 @@
 
 ```sh
 npm install express mustache-express dotenv
+```
+```sh
 npm install --save-dev @types/express @types/mustache-express @types/node
 ```
 
