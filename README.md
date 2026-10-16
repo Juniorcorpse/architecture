@@ -10,6 +10,15 @@ npm install express mustache-express dotenv
 ```sh
 npm install --save-dev @types/express @types/mustache-express @types/node
 ```
+```sh
+npm install -D tsx
+```
+```sh
+npm install cors
+```
+```sh
+npm install -D @types/cors
+```
 
 - Adicionado o `Jest` e seus tipos como dependências de desenvolvimento no `package.json`
 
