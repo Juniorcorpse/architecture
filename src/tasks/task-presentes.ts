@@ -1,4 +1,4 @@
-import type { Task } from "../entities/task.js";
+import type { Task } from "./task.entity.js";
 
 type createTaskPresenterType = {
     errorMessage: string;

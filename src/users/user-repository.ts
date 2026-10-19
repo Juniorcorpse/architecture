@@ -1,4 +1,4 @@
-import type { User } from "../entities/user.js";
+import type { User } from "./user.entity.js";
 
 export type UserRepository = {
     findById: (email: string) => Promise<User | null>;
