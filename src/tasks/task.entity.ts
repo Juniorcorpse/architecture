@@ -1,6 +1,7 @@
 export type Task = {
-    title: string;
-    
+    id:string;
+    title: string;    
+    isCompleted: boolean;
 }
 export const createTask = (title: string) => {
     return {   title  } as Task;
