@@ -1,7 +1,7 @@
-import { createUser } from "./user.entity.js";
+import { createUser } from "../user.entity.js";
 
-import { createInMemoryUserRepository } from "./in-memory-user-repository.js";
 import { registerUser } from "./register-user.use-case.js";
+import { createInMemoryUserRepository } from "../infra/in-memory-user-repository.js";
 describe("register User - User case", () => {
     it("deve registrar um novo usuário", async () => {
         const userRepository = createInMemoryUserRepository();

@@ -1,8 +1,8 @@
 import type { RequestHandler } from "express";
-import { registerTask } from "./retister-task.use-case.js";
+import { registerTask } from "../domain/use-cases/retister-task.use-case.js";
 import { createTaskPresenter } from "./task-presentes.js";
-import { TaskRepositoryPostgreSQL } from "./task-repository.js";
-import { TaskNotFound } from "./errors/task-not-found.error.js";
+import { TaskNotFound } from "../errors/task-not-found.error.js";
+import { TaskRepositoryPostgreSQL } from "./postgresql-task.reposesitory.js";
 
 export const createTask: RequestHandler = async (req, res) => {
     try {

@@ -1,5 +1,5 @@
 import { AppError } from "../../shared/app-erros.js";
-import { TaskEvent, TaskStatus } from "../task.entity.js";
+import { TaskEvent, TaskStatus } from "../domain/task.entity.js";
 
 export class InvalidTransitionError extends AppError {
     constructor(fromStatus: TaskStatus, event: TaskEvent) {
