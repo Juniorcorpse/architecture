@@ -1,4 +1,6 @@
 import { v4 } from "uuid";
+import { InvalidTransitionError } from "./errors/invalid-transition.error.js";
+import { SmallTitleError } from "./errors/small-title.error.js";
 
 //lista de status possíveis para uma task
 export type TaskStatus = "PENDING" | "IN-PROGRESS" | "DONE" | "CANCELLED";
@@ -10,7 +12,7 @@ const TRANSITIONS: Record<TaskStatus, Partial<Record<TaskEvent, TaskStatus>>> = 
     "CANCELLED": {}
 };
 
-type TaskEvent = "start" | "complete" | "cancel";
+export type TaskEvent = "start" | "complete" | "cancel";
 
 export type Task = {
     id:string;
@@ -18,7 +20,7 @@ export type Task = {
     status: TaskStatus;
 }
 export const createTask = (title: string) => {
-    if(title.length < 3) throw new Error("Título deve ter pelo menos 3 caracteres.");
+    if(title.length < 2) throw new SmallTitleError();
 
     return Object.freeze({   
         id: v4(),
@@ -29,6 +31,6 @@ export const createTask = (title: string) => {
 
 export const transitionStatus = (task: Task, event: TaskEvent) => {
     const nextStatus = TRANSITIONS[task.status][event];
-    if (!nextStatus) throw new Error(`Transição inválida: ${task.status} -> ${event}`);
+    if (!nextStatus) throw new InvalidTransitionError(task.status, event);
     return { ...task, status: nextStatus };
 }
